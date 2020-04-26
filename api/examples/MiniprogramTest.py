@@ -1,6 +1,5 @@
 import sys
 import random
-
 sys.path.append("../src/")
 from api.src.CorpApi import *
 from api.examples.TestConf import *

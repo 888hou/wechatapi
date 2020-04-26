@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#########################################################################
-# Author: jonyqin
-# Created Time: Thu 11 Sep 2014 03:55:41 PM CST
-# File Name: Sample.py
-# Description: WXBizMsgCrypt 使用demo文件
-#########################################################################
 from callback.WXBizMsgCrypt import WXBizMsgCrypt
 import xml.etree.cElementTree as ET
 import sys
@@ -69,7 +61,7 @@ if __name__ == "__main__":
     ret, sMsg = wxcpt.DecryptMsg(sReqData, sReqMsgSig, sReqTimeStamp, sReqNonce)
     print(ret, sMsg)
 
-    if (ret != 0):
+    if ret != 0:
         print("ERR: DecryptMsg ret: " + str(ret))
         sys.exit(1)
     # 解密成功，sMsg即为xml格式的明文
@@ -101,7 +93,7 @@ if __name__ == "__main__":
     '''
     sRespData = "<xml><ToUserName>ww1436e0e65a779aee</ToUserName><FromUserName>ChenJiaShun</FromUserName><CreateTime>1476422779</CreateTime><MsgType>text</MsgType><Content>你好</Content><MsgId>1456453720</MsgId><AgentID>1000002</AgentID></xml>"
     ret, sEncryptMsg = wxcpt.EncryptMsg(sRespData, sReqNonce, sReqTimeStamp)
-    if (ret != 0):
+    if ret != 0:
         print("ERR: EncryptMsg ret: " + str(ret))
         sys.exit(1)
     # ret == 0 加密成功，企业需要将sEncryptMsg返回给企业号

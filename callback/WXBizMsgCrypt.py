@@ -2,8 +2,6 @@
 @copyright: Copyright (c) 1998-2014 Tencent Inc.
 
 """
-# ------------------------------------------------------------------------
-import sys
 import base64
 import string
 import random
@@ -44,7 +42,7 @@ class SHA1:
             sortlist = [token, timestamp, nonce, encrypt]
             sortlist.sort()
             sha = hashlib.sha1()
-            sha.update("".join(sortlist))
+            sha.update(''.join(sortlist))
             return ierror.WXBizMsgCrypt_OK, sha.hexdigest()
         except Exception as e:
             print(e)

@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- encoding:utf-8 -*-
-
 """ 对企业微信发送给企业后台的消息加解密示例代码.
 @copyright: Copyright (c) 1998-2014 Tencent Inc.
 
